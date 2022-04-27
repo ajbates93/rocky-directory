@@ -2,8 +2,10 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore"
 
+const runtimeConfig = useRuntimeConfig()
+
 const firebaseConfig = {
-  apiKey: "AIzaSyB0z2szwGXWPq993HFnB-3aIEkwgJn5ZAw",
+  apiKey: runtimeConfig.FIREBASE_API_KEY,
   authDomain: "rocky-directory.firebaseapp.com",
   projectId: "rocky-directory",
   storageBucket: "rocky-directory.appspot.com",
