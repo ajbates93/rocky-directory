@@ -7,7 +7,7 @@
     description: String
   }
 
-  const name = ref('')
+  const petName = ref('')
   const age = ref('')
   const size = ref(0)
   const type = ref(0)
@@ -15,7 +15,7 @@
 
   const handleSubmit = async () => {
     const form: Animal = {
-      name: name.value,
+      name: petName.value,
       age: age.value,
       size: size.value,
       type: type.value,
@@ -37,12 +37,44 @@
 <template>
   <div>
     <form class="form" @submit.prevent="handleSubmit">
-      <input placeholder="name" type="text" v-model="name" />
-      <input placeholder="age" type="text" v-model="age" />
-      <input placeholder="size" type="text" v-model="size" />
-      <input placeholder="type" type="text" v-model="type" />
-      <input placeholder="description" type="text" v-model="description" />
-      <button>Search For TV Shows</button>
+      <div class="row">
+        <input placeholder="name" type="text" v-model="petName" />
+      </div>
+      <div class="row">
+        <input placeholder="description" type="text" v-model="description" />
+      </div>
+      <div class="row">
+        <input placeholder="age" type="text" v-model="age" />
+      </div>
+      <div class="row">
+        <input placeholder="size" type="text" v-model="size" />
+      </div>
+      <div class="row">
+        <input placeholder="type" type="text" v-model="type" />
+      </div>
+      <button>Create</button>
     </form>
   </div>
 </template>
+
+<style lang="less" scoped>
+.form {
+  max-width: 400px;
+  border: 1px solid #eaeaea;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.row {
+  margin: 0.5rem 0;
+
+  input[type=text] {
+    border: 1px solid #dadada;
+    padding: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  button {
+  }
+}
+</style>

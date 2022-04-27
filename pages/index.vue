@@ -11,7 +11,7 @@ onMounted(async () => {
 
 <template>
   <div>
-    <div v-for="(animal, idx) in animals">
+    <div v-for="(animal, idx) in animals" :key="idx">
       <p>Name: {{animal.name}}</p>
       <p>Age: {{animal.age}}</p>
       <p>Description: {{animal.description}}</p>
