@@ -4,12 +4,18 @@
 
 <template>
   <header id="header">
-    <NuxtLink to="/">
+    <NuxtLink id="imageLink" to="/">
       <picture id="image">
         <img src="/public/textImage.webp" />
       </picture>
     </NuxtLink>
-    <NuxtLink to="/animals/AddAnimal">
+    <NuxtLink class="link" to="/about">
+      About
+    </NuxtLink>
+    <NuxtLink class="link" to="/contact">
+      Contact
+    </NuxtLink>
+    <NuxtLink class="link" to="/animals/AddAnimal">
       Add New
     </NuxtLink>
   </header>
@@ -22,9 +28,13 @@ header {
   left: 0;
   background-color: #efefef;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding: 0 2rem 0 0.5rem;
+
+  #imageLink {
+    margin-right: auto;
+  }
 
   #image  { 
     img {
@@ -35,9 +45,11 @@ header {
     }
   }
 
-  #link {
-    font-size: 1.5rem;
+  .link {
+    margin-left: 1rem;
+    font-size: 1.25rem;
     font-weight: bold;
+    text-decoration: none;
   }
 }
 </style>
