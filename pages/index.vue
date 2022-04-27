@@ -1,5 +1,21 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+const animals = ref()
+
+onMounted(async () => {
+  const { result } = await $fetch("/api/query?col=animals")
+  animals.value = result
+})
+
+</script>
 
 <template>
-  <h1>Index</h1>
+  <div>
+    {{ animals }}
+  </div>
+  
 </template>
+
+<style lang="less" scoped>
+
+</style>
