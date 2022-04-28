@@ -10,12 +10,15 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="animal-list">
-    <div class="animal" v-for="(animal, idx) in animals" :key="idx">
-      <p>Name: {{animal.name}}</p>
-      <p>Age: {{animal.age}}</p>
-      <p>Description: {{animal.description}}</p>
-    </div>    
+  <div>
+    <h1 class="font-bold text-gray-600">Welcome</h1>
+    <div class="animal-list">
+      <div class="animal" v-for="(animal, idx) in animals" :key="idx">
+        <p>Name: {{animal.name}}</p>
+        <p>Age: {{animal.age}}</p>
+        <p>Description: {{animal.description}}</p>
+      </div>    
+    </div>
   </div>
 </template>
 

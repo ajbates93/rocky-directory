@@ -6,7 +6,7 @@
   <header id="header">
     <NuxtLink id="imageLink" to="/">
       <picture id="image">
-        <img src="/public/textImage.webp" />
+        <img src="/textImage.webp" />
       </picture>
     </NuxtLink>
     <NuxtLink class="link" to="/about">
